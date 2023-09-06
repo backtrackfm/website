@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./**/*.{ts,tsx}"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   theme: {
     container: {
       center: true,
@@ -9,9 +14,6 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
-    },
-    fontFamily: {
-      sans: ["articulat-cf", "sans-serif"],
     },
     extend: {
       colors: {
@@ -68,16 +70,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      safelist: [
-        "bg-lime-500",
-        "bg-cyan-500",
-        "bg-violet-500",
-        "bg-purple-500",
-        "bg-yellow-500",
-        "bg-orange-500",
-        "bg-red-500",
-      ],
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+}
